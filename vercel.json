@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/thumbnail.png", "destination": "/api/thumbnail" }
+    { "source": "/api/image.png", "destination": "/api/image" }
   ]
 }

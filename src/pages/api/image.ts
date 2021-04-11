@@ -12,17 +12,19 @@ export default async (
   const query = req.query
 
   try {
+    const text = String(query.text);
+    const bgColor = String(query.bgcolor);
+    const textColor = String(query.textcolor);
+    const textStyle = String(query.textstyle);
+    const textWeigh = String(query.textweigh);
+    const textAlign = String(query.textalign);
+    const textFont = String(query.textfont);
+    const textPosition = String(query.textposition);
+    const textSize = String(query.textsize);
+    const bgImage = decodeURIComponent(String(query.bgimage));
+    const icon = decodeURIComponent(String(query.icon));
 
-    const level = Number(query.level)
-    const challenges = Number(query.challenges)
-    const experience = Number(query.experience)
-
-    if (!level || !challenges || !experience) {
-      throw new Error(`${level}${challenges}${experience} Missing informations`);
-    }
-
-    const html = getHtml({ level, challenges, experience})
-
+    const html = getHtml({ bgColor, text, textColor, textStyle, textWeigh, textAlign, textFont, textPosition, textSize, bgImage, icon })
     if (isHtmlDebug) {
       res.setHeader('Content-Type', 'text/html')
       res.end(html)

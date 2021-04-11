@@ -1,0 +1,33 @@
+.geral {
+  margin: 0;
+  background: #ccc;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position:relative;
+  width:1200px;
+  height:630px;
+
+  main h1 {
+    position:absolute;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-family: normal;
+  }
+  
+  main img {
+    width:100%;
+    max-width:130px;
+    height:130px;
+    object-fit: contain;
+  }
+}
+
+
+    
